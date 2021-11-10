@@ -1,0 +1,75 @@
+.why-us 
+  padding: 145px 0 150px 0
+  position: relative
+  &__heading 
+    text-align: center
+    &-title 
+      position: relative
+      @include text-title-50 
+      padding: 10px 
+    &-text 
+      @include text-paragraph-18 
+      padding: 10px 
+  &__reasons 
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  &__item 
+    width: 33.3%
+    padding: 45px
+    &-header 
+      display: flex
+    &-title 
+      font-family: 'Roboto-Medium'
+      font-size: 18px
+      line-height: 23px
+      color: $black-title 
+      padding-left: 10px   
+    &-text 
+      @include text-paragraph-grey  
+      padding-top: 20px
+  &__footer 
+    display: flex
+    justify-content: center
+    align-items: center
+    align-content: center
+    &-text 
+      @include text-title-25    
+.button 
+  text-align: center
+  &-one 
+    padding-top: 12px
+    margin-left: 20px
+    margin-top: 15px
+
+@media (max-width: 992px)
+  .why-us 
+    &__item 
+      width: 40%    
+
+@media (max-width: 768px) 
+  .why-us 
+    padding: 50px 0
+    &__heading 
+      padding-bottom: 20px
+    &__reasons 
+      display: block
+      text-align: center 
+    &__item 
+      width: 100%
+      padding: 15px
+      &-header 
+        display: block
+        & img 
+          margin: 0 auto
+          margin-bottom: 15px
+      &-title 
+        padding-left: 0    
+    &__footer 
+      display: block
+      text-align: center 
+      margin-top: 30px
+      &-text 
+        margin-bottom: 35px
+  .button-one 
+    margin: 0 auto                

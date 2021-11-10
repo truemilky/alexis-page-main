@@ -1,0 +1,112 @@
+.work-steps
+  padding: 150px 0 
+  position: relative
+  &__heading
+    text-align: center
+    &-title 
+      position: relative
+      @include text-title-50  
+      font-weight: bold
+    &-text 
+      @include text-paragraph-18
+      padding: 15px 15px 0px 15px 
+      margin-bottom: 120px
+  &__image 
+    & img 
+      padding: 10px
+  &__step
+    &-left 
+      display: flex
+      flex-wrap: wrap
+      position: absolute  
+      top: -51px
+      left: 15px
+      min-width: 42%
+      background-color: $white 
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05)  
+    &-right  
+      display: flex
+      flex-wrap: wrap
+      position: absolute
+      top: -51px
+      right: 15px 
+      min-width: 42%
+      background-color: $white 
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05)  
+  &__inner 
+    display: flex
+    position: relative
+    justify-content: center
+  &__decoration 
+    &-box 
+      display: inline-block
+      min-width: 57px
+      min-height: 40px
+      background-image: url('../img/work-steps/work-steps-numbers-01.png')
+      background-repeat: no-repeat
+      margin: 35px 30px 0 35px
+      &::before 
+        content: ''
+        display: inline-block
+        position: relative
+        bottom: 18px
+        left: 42px
+        width: 1px
+        height: 118px
+        background-color: #e3e3e3
+        transform: rotate(45deg)
+  &__title 
+    @include text-title-25
+    margin: 35px 35px 35px 0
+  &__text 
+    @include text-paragraph-grey   
+    margin-bottom: 55px        
+.number__02 
+  min-width: 67px
+  min-height: 40px
+  background-image: url('../img/work-steps/work-steps-numbers-02.png')
+.number__03 
+  min-width: 65px
+  min-height: 40px  
+  background-image: url('../img/work-steps/work-steps-numbers-03.png')
+.number__04 
+  min-width: 68px
+  min-height: 40px  
+  background-image: url('../img/work-steps/work-steps-numbers-04.png') 
+@media (max-width: 768px) 
+  .work-steps 
+    padding: 50px 0
+    text-align: center
+    &__heading-text
+      margin-bottom: 25px
+    &__inner
+      display: block
+      padding: 30px 0 30px 0
+    &__step
+      &-left 
+        display: block
+        margin: 0 auto
+        width: 80%
+        position: static
+        text-align: center
+      &-right
+        display: block 
+        margin: 0 auto
+        width: 80%
+        position: static 
+        text-align: center   
+    &__title 
+      margin: 0
+      padding: 30px
+    &__decoration
+      &-box 
+        display: block
+        width: 57px
+        height: 40px
+        margin: 0 auto 
+        &::before 
+          display: none
+    &__image 
+      & img 
+        margin: 0 auto
+        padding: 0 10px      

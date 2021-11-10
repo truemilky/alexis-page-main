@@ -1,0 +1,58 @@
+.achieves 
+  background: url('../img/achieves/achieves-bcg.jpg') center center/cover no-repeat
+  padding: 145px 0 127px 0
+  text-align: center
+  &__box 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+  &__item
+    padding: 10px
+  &__image 
+    min-height: 55px   
+    & img 
+      margin: 0 auto
+  &__statistics 
+    @include text-title-20 
+    color: $white-darken
+    padding-top: 18px
+  &__text 
+    @include text-paragraph-grey 
+    color: $white-darken
+    opacity: 70%  
+    padding-top: 15px
+  &__checked 
+    display: block
+    margin: 0 auto
+    width: 15px
+    height: 16px   
+    border: 1px solid $red 
+    border-radius: 100% 
+    margin-top: 25px
+    margin-bottom: 15px
+    &-inside
+      display: block
+      margin: 0 auto
+      width: 9px
+      height: 8px
+      background-color: $red
+      border-radius: 100%
+      margin-top: 3px
+.border__green
+  border-color: $green  
+.border__purple
+  border-color: $purple
+.border__orange
+  border-color: $orange  
+.green-bcg 
+  background-color: $green  
+.purple-bcg 
+  background-color: $purple
+.orange-bcg 
+  background-color: $orange 
+
+@media (max-width: 768px)
+  .achieves
+    padding: 50px 0
+

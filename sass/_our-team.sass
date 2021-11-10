@@ -1,0 +1,220 @@
+.our-team
+  background-color: $grey-bcg
+  padding: 151px 0 149px 0
+  text-align: center
+  position: relative
+  &__tabs 
+    display: flex
+    flex-direction: column
+  &__title 
+    @include text-title-50 
+    position: relative
+  &__text 
+    @include text-paragraph-18 
+    padding: 10px 15px 70px 15px
+  &__members 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &__member 
+    padding: 10px  
+  &__person 
+    background-color: $white
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05)
+    &:hover 
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.164)
+    &-title 
+      font-size: 18px 
+      font-family: 'Roboto-Regular' 
+    &-text 
+      font-size: 13px
+      font-family: 'Roboto-Regular'
+      color: $grey
+      padding: 5px 0 12px 0  
+  &__about 
+    display: block
+    position: relative
+    text-align: left  
+    background-color: $white  
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05)
+    padding: 65px 0 75px 0
+    margin: 49px 10px 0  
+    &-wrapper 
+      display: flex
+      align-items: center 
+    &-title 
+      @include text-title-20
+      padding: 0 0 30px 95px
+    &-text 
+      max-width: 800px
+      @include text-paragraph-grey
+      padding: 0 105px 0 95px  
+    &-inner
+      display: none
+      position: relative
+      text-align: left  
+      background-color: $white  
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05)
+      padding: 65px 0 75px 0
+      margin: 49px 10px 0  
+      &:target 
+        display: flex
+        align-items: center
+      &.active 
+        display: flex
+        align-items: center
+  &__red-icon
+    & img
+      margin: 60px 25px 0 55px        
+  &__devider 
+    width: 2px
+    height: 151px
+    background-color: $light-grey  
+    margin: 50px 20px 0 0   
+  &__socials 
+    display: flex
+    flex-direction: column
+    margin: 60px 0 0 10px
+    &-item 
+      & a 
+        display: flex
+        align-items: center
+        @include text-paragraph-grey  
+        font-size: 13px    
+        & img
+          margin-right: 5px
+.triangle__01
+    display: block
+    position: absolute
+    top: -40px
+    left: 105px
+    width: 60px
+    height: 40px
+    background-image: url('../img/our-team/our-team-triangle.png')
+.triangle__02
+    display: block
+    position: absolute
+    top: -40px
+    left: 385px
+    width: 60px
+    height: 40px
+    background-image: url('../img/our-team/our-team-triangle.png') 
+.triangle__03
+    display: block
+    position: absolute
+    top: -40px
+    left: 672px
+    width: 60px
+    height: 40px
+    background-image: url('../img/our-team/our-team-triangle.png')           
+.triangle__04
+    display: block
+    position: absolute
+    top: -40px
+    left: 958px
+    width: 60px
+    height: 40px
+    background-image: url('../img/our-team/our-team-triangle.png')           
+@media (max-width: 1140px) 
+  .our-team
+    &__tabs 
+      flex-direction: row
+      justify-content: center
+    &__members 
+      flex-direction: column
+      justify-content: start
+    &__devider 
+      display: none  
+    &__socials 
+      flex-direction: row
+      margin: 0
+      & a 
+        margin: 0 10px 
+    &__about
+      &-inner
+        flex-direction: column
+        margin-left: 45px
+        padding-top: 38px
+      &-title 
+        text-align: center
+        padding: 0 25px 25px
+      &-text 
+        text-align: center
+        padding: 0 25px 
+    &__red-icon
+      & img
+        margin: 20px 0    
+  .our-team__triangle
+    display: block
+    position: absolute
+    top: 225px
+    left: -49px
+    transform: rotate(-90deg)
+    width: 60px
+    height: 40px
+    background-image: url('../img/our-team/our-team-triangle.png')
+  #tab__01 
+    max-height: 500px 
+    max-width: 400px 
+    position: relative
+    top: -100px
+  #tab__02
+    max-height: 500px
+    max-width: 400px 
+    position: relative
+    top: 230px
+  #tab__03
+    max-height: 500px
+    max-width: 400px 
+    position: relative
+    top: 580px  
+  #tab__04
+    max-height: 500px
+    max-width: 400px 
+    position: relative
+    top: 930px   
+@media (max-width: 768px)   
+  .our-team 
+    padding: 50px 0
+    &__tabs 
+      flex-direction: column
+    &__about
+      &-inner 
+        margin: 0 15px  
+    &__socials
+      flex-direction: column
+      & a 
+        margin-bottom: 5px      
+    &__members 
+      margin-bottom: 50px      
+  #tab__01,
+  #tab__02,
+  #tab__03,
+  #tab__04 
+    position: relative
+    top: 0
+    max-height: auto
+    min-height: 690px
+    max-width: 500px
+    margin: 0 auto  
+  .triangle__01,
+  .triangle__02,
+  .triangle__03,
+  .triangle__04
+    display: block
+    position: absolute
+    top: -40px
+    left: 50%
+    right: 50%
+    width: 60px
+    height: 40px
+    transform: rotate(0deg)
+    transform: translate(-30px)
+    background-image: url('../img/our-team/our-team-triangle.png')  
+@media (max-width: 576px)   
+  #tab__01,
+  #tab__02,
+  #tab__03,
+  #tab__04 
+    max-width: auto

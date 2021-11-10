@@ -1,0 +1,52 @@
+.about-us
+  padding: 100px 0 
+  position: relative
+  &__img
+    & img
+      padding: 10px
+  &__info 
+    width: 652px
+    position: absolute
+    top: 224px
+    right: 100px
+    background-color: #fff  
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05)
+  &__title 
+    @include text-title-50
+    position: relative
+    padding-top: 94px
+    padding-left: 81px
+  &__text 
+    @include text-paragraph-grey
+    padding: 45px 83px 103px 81px
+  &__colorful
+    &-footer 
+      display: flex
+    &-item 
+      width: 25%
+      height: 3px  
+@media (max-width: 1140px)
+  .about-us
+    padding: 50px 0
+    position: static
+    &__info 
+      margin: 0 auto
+      position: static
+    &__img 
+      text-align: center  
+      padding: 30px 0
+      & img 
+        margin: 0 auto
+    &__title 
+      padding: 15px
+      margin: 0 auto  
+    &__text 
+      padding: 15px  
+@media (max-width: 992px)
+
+@media (max-width: 768px)
+  .about-us
+    &__info 
+      width: 80%
+@media (max-width: 576px)
+

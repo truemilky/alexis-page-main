@@ -1,0 +1,181 @@
+.header 
+  background-color: #3f4049   
+  &__nav 
+    display: flex
+    justify-content: space-between
+    align-items: center 
+  &__menu 
+    &-list
+      display: flex
+      flex-wrap: wrap
+    & a 
+      display: block
+      @include text-menu
+      padding: 31px 11px 34px 11px
+      &:hover 
+        background-color: $white
+        color: #272727
+        transition: .5s all
+  &__logo 
+    & a img 
+      margin: 0 auto
+  &__offer 
+    text-align: center    
+    background: url('../img/header-bcg-img.jpg') center center/cover no-repeat
+    padding: 175px 0 177px 0
+  &__title 
+    @include text-title-big
+    padding-bottom: 49px
+  &__features 
+    width: 66.66%
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-content: center
+    padding-top: 83px
+    &-info 
+      font-size: 18px
+      font-family: 'Roboto-Medium'
+      text-transform: uppercase
+      padding-top: 38px
+    &-item 
+      & img
+        margin: 0 auto  
+  &__button
+      margin-right: 10px    
+  &__burger 
+    display: none
+    position: relative
+    width: 35px
+    height: 28px
+    transition: all .3s ease
+    &::before 
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      width: 35px
+      height: 2px
+      background-color: #fc5f45
+      transition: all .3s ease
+    &::after  
+      content: ""
+      display: block
+      position: absolute
+      bottom: 0
+      width: 35px
+      height: 2px
+      background-color: #fc5f45
+      transition: all .3s ease
+    &.active
+      &::before 
+        top: 12px
+        transform: rotate(45deg)  
+        transition: all .3s ease
+      &::after 
+        bottom: 13px
+        transform: rotate(-45deg)  
+        transition: all .3s ease
+    &-line 
+      display: block
+      position: absolute
+      top: 50%
+      transform: translateY(-1px)
+      width: 35px
+      height: 2px
+      background-color: #fc5f45 
+      transition: all .3s ease  
+      &.active 
+        transform: scale(0)
+        transition: all .3s ease
+@media (max-width: 1140px)
+  .container 
+    width: 100%
+  .header 
+    &__nav
+      justify-content: center
+    &__logo
+      padding-right: 20px  
+@media (max-width: 992px)
+  .header 
+    &__nav
+      display: block
+      text-align: center
+    &__menu-list
+      justify-content: center
+    &__logo
+      padding-top: 30px 
+      padding-right: 0 
+    &__offer
+      padding: 70px 0 
+    &__features 
+      flex-direction: column
+      justify-content: center  
+      &-item 
+        padding: 0 0 30px 0 
+    &__button 
+      margin-right: 0    
+@media (max-width: 768px)
+  .header 
+    &__title 
+      padding: 0 20px 49px 20px
+    &__menu 
+      display: none
+      position: absolute
+      top: 75px
+      left: 0
+      &.active 
+        display: block
+      &-list 
+        flex-direction: column
+    &__menu a 
+      position: relative
+      padding: 10px 25px  
+      z-index: 19
+    &__nav 
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 20px
+      background-color: #3f4049  
+      z-index: 20 
+      &.active
+        &::after 
+          content: ""
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          width: 30%
+          height: 100vh
+          background-color: #3f4049 
+          z-index: 18
+    &__logo 
+      position: relative
+      padding-top: 0
+      z-index: 20
+    &__burger 
+      display: block    
+@media (max-width: 576px)
+  .header 
+    &__features 
+      justify-content: center
+    &__nav 
+      padding: 15px  
+@media (max-width: 438px)
+  .header__nav.active::after 
+    width: 40%
+@media (max-width: 350px)
+  .header__nav.active::after 
+    width: 45%
+
+
+
+  
+
+        

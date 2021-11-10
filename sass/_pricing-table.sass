@@ -1,0 +1,84 @@
+.pricing-table 
+  background-color: $grey-bcg 
+  padding: 149px 0 152px 0
+  position: relative
+  &__heading 
+    text-align: center
+    &-title 
+      @include text-title-50
+      position: relative
+    &-text 
+      @include text-paragraph-18
+      margin: 10px  
+  &__plans 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    text-align: center
+    padding-top: 70px
+  &__item 
+    width: 25%
+    background-color: $white 
+    margin: 20px
+    padding-bottom: 35px
+    &-title 
+      @include text-title-20
+      padding: 30px
+  &__round 
+    &-out
+      width: 112px
+      height: 112px
+      border: 3px solid $green 
+      border-radius: 100%  
+      margin: 0 auto
+    &-in 
+      position: relative
+      top: 3px
+      width: 100px
+      height: 100px
+      background-color: $green
+      border-radius: 100%  
+      margin: 0 auto
+      @include text-title-25
+      line-height: 25px
+      color: $white
+      padding-top: 25px
+      & span 
+        font-family: 'Roboto-Regular'
+        font-size: 13px
+  &__features 
+    padding: 25px       
+  &__about
+    @include text-paragraph-grey
+    line-height: 40px    
+    & span 
+      font-family: 'Roboto-Bold' 
+      & img 
+        margin: 0 auto
+.border-red
+  border-color: $red
+.border-purple
+  border-color: $purple
+.red-bcg 
+  background-color: $red
+.purple-bcg 
+  background-color: $purple    
+@media (max-width: 992px)
+  .pricing-table 
+    &__plans 
+      justify-content: center
+      padding-top: 20px
+    &__item 
+      width: 33.3%
+@media (max-width: 768px)
+  .pricing-table 
+    padding: 50px 0
+    &__plans 
+      flex-direction: column
+    &__item 
+      width: 50%
+      margin: 20px auto  
+@media (max-width: 576px)  
+  .pricing-table 
+    &__item 
+      width: 80%
